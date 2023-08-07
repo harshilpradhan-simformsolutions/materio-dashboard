@@ -54,3 +54,9 @@ export const palettes = {
     outlinedRestingBg: '#FF4C5180',
   },
 };
+
+export const typography = {
+  main: '#E7E3FCDE',
+  hover: '#E7E3FC0A',
+  disabled: '#E7E3FC61',
+};
