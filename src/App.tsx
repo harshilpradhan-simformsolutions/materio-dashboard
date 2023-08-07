@@ -1,24 +1,18 @@
-import { Button } from 'antd';
+import { Button, Space } from 'antd';
 import { PropsWithChildren } from 'react';
 import styled from 'styled-components';
+import { Tag } from './ui';
 
 const SectionBase = styled.section`
   margin: 1rem;
   padding: 1rem;
 `;
 
-const Flex = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin: 0.5rem 0;
-`;
-
 const Display = ({ title, children }: PropsWithChildren<{ title: string }>) => {
   return (
     <SectionBase>
       <h2>{title}</h2>
-      <Flex>{children}</Flex>
+      <Space size={10}>{children}</Space>
     </SectionBase>
   );
 };
@@ -37,6 +31,11 @@ function App() {
         <Button size="large" shape="round">
           Click
         </Button>
+      </Display>
+      <Display title="Tags">
+        <Tag color="info" bordered={false}>
+          Harshil
+        </Tag>
       </Display>
     </>
   );
