@@ -59,4 +59,10 @@ export const typography = {
   main: '#E7E3FCDE',
   hover: '#E7E3FC0A',
   disabled: '#E7E3FC61',
+  secondary: '#E7E3FCAD',
+};
+
+export const misc = {
+  background: '#28243D',
+  divider: '#E7E3FC1F',
 };

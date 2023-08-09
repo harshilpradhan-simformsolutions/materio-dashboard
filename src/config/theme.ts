@@ -1,5 +1,5 @@
 import { ThemeConfig } from 'antd';
-import { palettes, typography } from './colors';
+import { misc, palettes, typography } from './colors';
 
 export const theme: ThemeConfig = {
   token: {
@@ -34,6 +34,10 @@ export const theme: ThemeConfig = {
     Typography: {
       colorText: typography.main,
       colorTextHeading: typography.main,
+    },
+    Divider: {
+      colorSplit: misc.divider,
+      fontSize: 12,
     },
   },
 };

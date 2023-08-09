@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
-import { palettes, typography } from './config/colors';
+import { misc, palettes, typography } from './config/colors';
+import { classes } from './config/utilities';
 
 export const GlobalStyle = createGlobalStyle`
   :root { 
@@ -63,10 +64,10 @@ export const GlobalStyle = createGlobalStyle`
     --color-error-outlined-resting-bg: ${palettes.error.outlinedRestingBg};
 
     --color-text: ${typography.main};
-    --color-background: #28243D;
+    --color-background: ${misc.background};
     --color-action-hover: ${typography.hover};
     --color-disabled: ${typography.disabled};
-    --color-divider: #E7E3FC1F;
+    --color-divider: ${misc.divider};
   }
   
   *, ::after, ::before {
@@ -82,7 +83,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .center {
     display: grid;
-    place-items: center;
+    place-content: center;
   }
 
   /** For Debugging */
@@ -94,6 +95,21 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  .icon {
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -0.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /** AntD Global customization */
   .ant-tag {
     --color: var(--color-primary);
     background-color: var(--color);
@@ -121,4 +137,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  /** Utility classes */
+  ${classes}
 `;
