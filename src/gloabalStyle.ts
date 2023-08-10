@@ -147,6 +147,16 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .ant-badge {
+    & .ant-badge-dot {
+      box-shadow: none;
+      box-sizing: content-box;
+      height: 8px;
+      width: 8px;
+      border: 2px solid #312D4B;
+    }
+  }
+
   /** Utility classes */
   ${classes}
 `;
