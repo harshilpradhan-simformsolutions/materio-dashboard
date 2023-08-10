@@ -68,6 +68,9 @@ export const GlobalStyle = createGlobalStyle`
     --color-action-hover: ${typography.hover};
     --color-disabled: ${typography.disabled};
     --color-divider: ${misc.divider};
+
+    --color-gradient-stop-1: #c6a7fe;
+    --color-gradient-stop-2: #9155FD;
   }
   
   *, ::after, ::before {
@@ -107,6 +110,7 @@ export const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: transform 0.3s;
   }
 
   /** AntD Global customization */
@@ -134,6 +138,12 @@ export const GlobalStyle = createGlobalStyle`
     }
     &.secondary {
       --color: var(--color-secondary);
+    }
+  }
+
+  .ant-radio-wrapper {
+    & .ant-radio-inner {
+      background: transparent;
     }
   }
 

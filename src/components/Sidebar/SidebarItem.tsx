@@ -13,9 +13,13 @@ const SidebarItem = (props: SidebarItemProps) => {
 
   return (
     <SidebarItemBase className="pointer">
-      <span className="mr-12 icon">{icon}</span>
+      <span className="icon">{icon}</span>
       <span className="label">{label}</span>
-      {expandable && <MdChevronRight size={24} color={typography.secondary} />}
+      {expandable && (
+        <span className="icon">
+          <MdChevronRight size={24} color={typography.secondary} />
+        </span>
+      )}
     </SidebarItemBase>
   );
 };

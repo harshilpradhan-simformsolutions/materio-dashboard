@@ -39,5 +39,9 @@ export const theme: ThemeConfig = {
       colorSplit: misc.divider,
       fontSize: 12,
     },
+    Radio: {
+      fontFamily: 'Inter, sans-serif',
+      fontSize: 16,
+    },
   },
 };
