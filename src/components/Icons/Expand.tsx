@@ -1,4 +1,4 @@
-import { ReactComponent as Arrow } from '../../assets/arrow.svg';
+import { ReactComponent as Arrow } from '../../assets/icons/arrow.svg';
 
 interface ExpandProps {
   direction?: 'up' | 'down';

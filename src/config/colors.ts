@@ -66,3 +66,8 @@ export const misc = {
   background: '#28243D',
   divider: '#E7E3FC1F',
 };
+
+export const dark = {
+  background: '#312D4B',
+  other: '#E7E3FC3B',
+};

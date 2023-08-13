@@ -16,14 +16,14 @@ import { SidebarSection } from './SidebarSection';
 import { SidebarItem } from './SidebarItem';
 
 import { ReactComponent as Logo } from '../../../public/logo.svg';
-import { ReactComponent as Radio } from '../../assets/radio-checked.svg';
-import { ReactComponent as Home } from '../../assets/home.svg';
-import { ReactComponent as Card } from '../../assets/card.svg';
-import { ReactComponent as User } from '../../assets/user.svg';
-import { ReactComponent as Invoice } from '../../assets/invoice.svg';
-import { ReactComponent as Arrows } from '../../assets/components.svg';
-import { ReactComponent as Typography } from '../../assets/typography.svg';
-import { ReactComponent as Checked } from '../../assets/checked.svg';
+import { ReactComponent as Radio } from '../../assets/icons/radio-checked.svg';
+import { ReactComponent as Home } from '../../assets/icons/home.svg';
+import { ReactComponent as Card } from '../../assets/icons/card.svg';
+import { ReactComponent as User } from '../../assets/icons/user.svg';
+import { ReactComponent as Invoice } from '../../assets/icons/invoice.svg';
+import { ReactComponent as Arrows } from '../../assets/icons/components.svg';
+import { ReactComponent as Typography } from '../../assets/icons/typography.svg';
+import { ReactComponent as Checked } from '../../assets/icons/checked.svg';
 
 const items = ['CRM', 'Analytics', 'eCommerce'];
 

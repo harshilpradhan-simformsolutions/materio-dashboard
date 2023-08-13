@@ -64,11 +64,13 @@ export const GlobalStyle = createGlobalStyle`
     --color-error-outlined-resting-bg: ${palettes.error.outlinedRestingBg};
 
     --color-text: ${typography.main};
+    --color-text-secondary: ${typography.secondary};
     --color-background: ${misc.background};
     --color-action-hover: ${typography.hover};
     --color-disabled: ${typography.disabled};
     --color-divider: ${misc.divider};
 
+    --color-badge-border: #312D4B;
     --color-gradient-stop-1: #c6a7fe;
     --color-gradient-stop-2: #9155FD;
   }
@@ -150,10 +152,32 @@ export const GlobalStyle = createGlobalStyle`
   .ant-badge {
     & .ant-badge-dot {
       box-shadow: none;
-      box-sizing: content-box;
-      height: 8px;
-      width: 8px;
-      border: 2px solid #312D4B;
+      height: 12px;
+      width: 12px;
+      border: 2px solid var(--color-badge-border);
+    }
+  }
+
+  .ant-input-affix-wrapper {
+    & .ant-input-prefix {
+      margin-inline-end: 0;
+    }
+    > input.ant-input {
+      padding: 16px 12px;
+    }
+  }
+
+  .ant-input {
+    padding: 16px 12px;
+    &.filled {
+      background-color: var(--color-action-hover);
+    }
+    &.standard {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+      background: transparent;
     }
   }
 

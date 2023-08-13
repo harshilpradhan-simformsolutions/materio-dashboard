@@ -1,5 +1,5 @@
 import { ThemeConfig } from 'antd';
-import { misc, palettes, typography } from './colors';
+import { dark, misc, palettes, typography } from './colors';
 
 export const theme: ThemeConfig = {
   token: {
@@ -7,7 +7,7 @@ export const theme: ThemeConfig = {
     colorError: palettes.error.main,
     colorSuccess: palettes.success.main,
     colorText: typography.main,
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: 'Inter,system-ui,Avenir,Helvetica,Arial,sans-serif',
     green: palettes.success.main,
     yellow: palettes.warning.main,
     blue: palettes.info.main,
@@ -40,8 +40,23 @@ export const theme: ThemeConfig = {
       fontSize: 12,
     },
     Radio: {
-      fontFamily: 'Inter, sans-serif',
       fontSize: 16,
+    },
+    Input: {
+      colorBgContainer: dark.background,
+      colorBorder: dark.other,
+      colorText: typography.secondary,
+      borderRadiusSM: 6,
+      borderRadius: 6,
+      borderRadiusLG: 6,
+      fontSize: 16,
+      colorTextPlaceholder: typography.secondary,
+    },
+    Card: {
+      colorBgContainer: dark.background,
+      colorText: typography.main,
+      colorTextDescription: typography.secondary,
+      fontSizeHeading1: 24,
     },
   },
 };

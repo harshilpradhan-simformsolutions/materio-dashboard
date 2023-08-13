@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const SidebarBase = styled.nav`
+  max-height: 100vh;
+  overflow: hidden;
   .logo {
     display: flex;
     align-items: center;
