@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { misc, palettes, typography } from './config/colors';
+import { dark, misc, palettes, typography } from './config/colors';
 import { classes } from './config/utilities';
 
 export const GlobalStyle = createGlobalStyle`
@@ -70,9 +70,11 @@ export const GlobalStyle = createGlobalStyle`
     --color-disabled: ${typography.disabled};
     --color-divider: ${misc.divider};
 
+    --color-dark-bg: ${dark.background};
     --color-badge-border: #312D4B;
     --color-gradient-stop-1: #c6a7fe;
     --color-gradient-stop-2: #9155FD;
+    --color-input-icon: #E7E3FC8A
   }
   
   *, ::after, ::before {
@@ -116,6 +118,29 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   /** AntD Global customization */
+  .ant-btn {
+    font-weight: 500;
+    &-default {
+      background-color: transparent;
+    }
+  }
+
+  .ant-checkbox {
+    color: var(--color-text-secondary);
+    &-checked {
+      & .ant-checkbox-inner {
+        background-color: var(--color-primary) !important;
+        border-color: var(--color-primary) !important;
+      }
+    }
+    & .ant-checkbox-inner {
+      background-color: transparent;
+      border: 2px solid var(--color-text-secondary);
+      height: 18px;
+      width: 18px;
+    }
+  }
+
   .ant-tag {
     --color: var(--color-primary);
     background-color: var(--color);
@@ -158,6 +183,14 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .ant-input-suffix {
+    svg {
+      color: var(--color-input-icon);
+      height: 20px;
+      width: 22px;
+    }
+  }
+
   .ant-input-affix-wrapper {
     & .ant-input-prefix {
       margin-inline-end: 0;
@@ -183,4 +216,8 @@ export const GlobalStyle = createGlobalStyle`
 
   /** Utility classes */
   ${classes}
+
+  .text-primary {
+    color: var(--color-primary);
+  }
 `;
