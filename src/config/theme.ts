@@ -58,5 +58,8 @@ export const theme: ThemeConfig = {
       colorTextDescription: typography.secondary,
       fontSizeHeading1: 24,
     },
+    Alert: {
+      colorWarningBg: palettes.warning.outlinedRestingBg,
+    },
   },
 };

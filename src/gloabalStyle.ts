@@ -214,6 +214,60 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .ant-tabs {
+    background-color: #312D4B;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #E7E3FCAD;
+    &-tab-btn {
+      padding: 0 20px;
+    }
+    &-nav {
+      &::before {
+        border: 1px solid #E7E3FC1F;
+      }
+      &-list {
+        text-transform: uppercase;
+      }
+    }
+  }
+  .ant-tabs-top {
+    > .ant-tabs-nav {
+      &::before {
+        border: 1px solid #E7E3FC1F;
+      }
+    }
+  }
+
+  .ant-select-dropdown {
+    background-color: #312D4B;
+  }
+  .ant-select-item-option-selected {
+    background-color: var(--color-primary-dark) !important;
+  }
+  .ant-select-single { 
+    &.ant-select-open {
+      & .ant-select-selection-item {
+        color: unset;
+      }
+    }
+  }
+
+
+  .ant-alert {
+    border: none;
+    border-radius: 5px;
+    &-warning {
+      &.ant-alert-with-description {
+        & .ant-alert-message {
+          color: var(--color-warning);
+        }
+      }
+      color: var(--color-warning);
+    }
+  }
+
+
   /** Utility classes */
   ${classes}
 
