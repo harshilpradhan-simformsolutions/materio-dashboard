@@ -6,6 +6,14 @@ export const AccountContainer = styled.div`
     grid-template-columns: 1fr 1fr;
     gap: 24px;
   }
+  .profile-image {
+    height: 120px;
+    width: 120px;
+    border-radius: 4px;
+  }
+  .profile-text {
+    font-weight: 400;
+  }
   .warning {
     color: var(--color-warning);
     border-radius: 5px;

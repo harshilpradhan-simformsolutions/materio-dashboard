@@ -1,14 +1,28 @@
-import { Input, Select, Button, Space } from 'antd';
+import { useState } from 'react';
 import { RxCross2 } from 'react-icons/rx';
+import { Input, Select, Button, Space } from 'antd';
+
+import profile from '../../assets/images/profile.png';
 import { AccountContainer } from './Profile.styles';
 import { ReactComponent as WarningIcon } from '../../assets/icons/warning.svg';
-import { useState } from 'react';
 
 const Account = () => {
   const [showBanner, setShowBanner] = useState(true);
 
   return (
     <AccountContainer className="px-20 mb-20">
+      <Space className="mb-24 mt-20" size={20}>
+        <img className="profile-image" src={profile} />
+        <div>
+          <Space size={16} className="mb-16">
+            <Button type="primary">Upload New Photo</Button>
+            <Button danger>Reset</Button>
+          </Space>
+          <p className="profile-text">
+            Allowed JPG, GIF or PNG. Max size of 800K
+          </p>
+        </div>
+      </Space>
       <form className="profile-form pb-24">
         <Input placeholder="Username" />
         <Input placeholder="Name" />
@@ -33,7 +47,9 @@ const Account = () => {
             <p className="warning-content__title">
               Your email is not confirmed. Please check your inbox.
             </p>
-            <p className="warning-content__subtitle">Resend Confirmation</p>
+            <span className="warning-content__subtitle pointer">
+              Resend Confirmation
+            </span>
           </div>
           <span
             role="button"

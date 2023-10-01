@@ -1,5 +1,8 @@
 import { Tabs } from 'antd';
+import { MdSearch } from 'react-icons/md';
+
 import { Account } from './Account';
+import { Flex } from '../../layouts/utils';
 
 const Profile = () => {
   return (
@@ -9,7 +12,12 @@ const Profile = () => {
       items={[
         {
           key: '1',
-          label: 'Account',
+          label: (
+            <Flex gap={9}>
+              <MdSearch size={20} />
+              Account
+            </Flex>
+          ),
           children: <Account />,
         },
       ]}

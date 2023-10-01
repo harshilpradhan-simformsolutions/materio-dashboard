@@ -7,9 +7,9 @@ import { Profile } from './pages/Profile/Profile';
 function App() {
   return (
     <Routes>
-      <Route path="/auth" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/" element={<Home />}>
-        <Route path="knowledge-base" element={<KnowledgeBase />} />
+        <Route index element={<KnowledgeBase />} />
         <Route path="profile" element={<Profile />} />
       </Route>
     </Routes>

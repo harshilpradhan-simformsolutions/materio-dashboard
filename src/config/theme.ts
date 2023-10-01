@@ -19,6 +19,7 @@ export const theme: ThemeConfig = {
       borderRadiusLG: 5,
       colorBorder: palettes.primary.outlinedRestingBg,
       colorText: palettes.primary.main,
+      colorError: palettes.error.main,
       paddingContentHorizontalSM: 13,
       paddingContentVerticalSM: 4,
       paddingContentHorizontal: 22,

@@ -1,5 +1,7 @@
 import { Avatar, Badge } from 'antd';
+import { Link } from 'react-router-dom';
 import { MdSearch, MdNotificationsNone } from 'react-icons/md';
+
 import { HeaderRoot } from './Header.styles';
 import { ReactComponent as DarkModeIcon } from '../../assets/icons/dark-mode.svg';
 import flag from '../../assets/images/us-flag.png';
@@ -18,7 +20,9 @@ const Header = () => (
       <MdNotificationsNone size={24} />
     </span>
     <Badge dot color="green" offset={[-6, 33]}>
-      <Avatar className="pointer" src={avatar} size="large" />
+      <Link to="/profile">
+        <Avatar className="pointer" src={avatar} size="large" />
+      </Link>
     </Badge>
   </HeaderRoot>
 );

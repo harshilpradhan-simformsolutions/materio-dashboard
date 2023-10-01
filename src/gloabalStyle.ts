@@ -119,6 +119,7 @@ export const GlobalStyle = createGlobalStyle`
 
   /** AntD Global customization */
   .ant-btn {
+    text-transform: uppercase;
     font-weight: 500;
     &-default {
       background-color: transparent;
