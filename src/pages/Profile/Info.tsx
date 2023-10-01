@@ -1,9 +1,10 @@
 import { useReducer } from 'react';
-import { Input, Select, Radio } from 'antd';
+import { Input, Select } from 'antd';
 
 import { InfoContainer } from './Profile.styles';
 import { ProfileAction } from './ProfileAction';
 import { Grid } from '../../layouts/utils';
+import { RadioGroup } from '../../components/antd/RadioGroup';
 
 const initialData = {
   bio: 'The name’s John Deo. I am a tireless seeker of knowledge, occasional purveyor of wisdom and also, coincidentally, a graphic designer. Algolia helps businesses across industries quickly create relevant 😎, scaLabel 😀, and lightning 😍 fast search and discovery experiences.',
@@ -55,20 +56,16 @@ const Info = () => {
             { label: 'Spanish', value: 'Spanish' },
           ]}
         />
-        <div>
-          <label className="block gender-label mb-10" htmlFor="gender">
-            Gender
-          </label>
-          <Radio.Group
-            className="ml-10"
-            id="gender"
-            options={[
-              { label: 'Male', value: 'Male' },
-              { label: 'Female', value: 'Female' },
-              { label: 'Other', value: 'Other' },
-            ]}
-          />
-        </div>
+        <RadioGroup
+          label="Gender"
+          className="ml-10"
+          id="gender"
+          options={[
+            { label: 'Male', value: 'Male' },
+            { label: 'Female', value: 'Female' },
+            { label: 'Other', value: 'Other' },
+          ]}
+        />
       </Grid>
       <ProfileAction />
     </InfoContainer>

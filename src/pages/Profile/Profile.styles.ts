@@ -83,7 +83,7 @@ export const SecurityContainer = styled.form`
       text-align: center;
       &__logo {
         // Color is used only here
-        background-color: rgb(59, 50, 93);
+        background-color: var(--color-primary-dimmed);
         border-radius: 6px;
       }
       &__title {
@@ -99,11 +99,6 @@ export const SecurityContainer = styled.form`
 `;
 
 export const InfoContainer = styled.form`
-  .gender-label {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-  }
   .ant-select {
     & .ant-select-arrow {
       color: unset;
@@ -116,5 +111,14 @@ export const InfoContainer = styled.form`
         line-height: 60px;
       }
     }
+  }
+`;
+
+export const BillingContainer = styled.div`
+  .current-plan {
+    border: 1px solid var(--color-divider);
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 24px;
   }
 `;

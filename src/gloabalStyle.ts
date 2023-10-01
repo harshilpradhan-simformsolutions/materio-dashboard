@@ -74,7 +74,8 @@ export const GlobalStyle = createGlobalStyle`
     --color-badge-border: #312D4B;
     --color-gradient-stop-1: #c6a7fe;
     --color-gradient-stop-2: #9155FD;
-    --color-input-icon: #E7E3FC8A
+    --color-input-icon: #E7E3FC8A;
+    --color-primary-dimmed: rgb(59, 50, 93);
   }
   
   *, ::after, ::before {
@@ -152,6 +153,11 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--color-text);
     border-color: var(--color);
     font-weight: 500;
+    &.primary {
+      color: var(--color-primary) !important;
+      background-color: var(--color-primary-dimmed);
+      border: none;
+    }
     &.outlined {
       background-color: transparent !important;
       color: var(--color);

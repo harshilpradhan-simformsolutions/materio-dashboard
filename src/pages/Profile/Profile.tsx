@@ -1,32 +1,19 @@
-import { PropsWithChildren } from 'react';
 import { Tabs } from 'antd';
 import { MdSearch, MdLockOpen } from 'react-icons/md';
 
+import { Label } from '../../components/antd/Label';
 import { ReactComponent as InfoIcon } from '../../assets/icons/info.svg';
+import { ReactComponent as BillingIcon } from '../../assets/icons/billing.svg';
 
 import { Account } from './Account';
-import { Flex } from '../../layouts/utils';
-import { Security } from './Security';
 import { Info } from './Info';
-
-interface LabelProps {
-  icon: React.ReactNode;
-}
-const Label = (props: PropsWithChildren<LabelProps>) => {
-  const { children, icon } = props;
-
-  return (
-    <Flex gap={9}>
-      {icon}
-      {children}
-    </Flex>
-  );
-};
+import { Billing } from './Billing';
+import { Security } from './Security';
 
 const Profile = () => {
   return (
     <Tabs
-      defaultActiveKey="3"
+      defaultActiveKey="4"
       destroyInactiveTabPane
       items={[
         {
@@ -46,8 +33,8 @@ const Profile = () => {
         },
         {
           key: '4',
-          label: <Label icon={<MdSearch size={20} />}>Notifications</Label>,
-          children: <div>Notifications</div>,
+          label: <Label icon={<BillingIcon />}>Billing</Label>,
+          children: <Billing />,
         },
       ]}
     />
