@@ -222,7 +222,9 @@ export const GlobalStyle = createGlobalStyle`
   .ant-tabs {
     background-color: #312D4B;
     border-radius: 6px;
-    font-weight: 500;
+    &-tab-btn {
+      font-weight: 500;
+    }
     color: #E7E3FCAD;
     .ant-tabs-content-holder {
       padding: 0 20px 20px 20px;
@@ -286,5 +288,9 @@ export const GlobalStyle = createGlobalStyle`
 
   .text-primary {
     color: var(--color-primary);
+  }
+
+  .block {
+    display: block;
   }
 `;

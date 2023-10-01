@@ -13,4 +13,18 @@ const Flex = styled.div<{ gap?: number }>`
     `}
 `;
 
-export { Flex };
+const Grid = styled.div<{ columns: number | string; gap?: number }>`
+  display: grid;
+  grid-template-columns: ${({ columns }) =>
+    typeof columns === 'number' ? `repeat(${columns}, 1fr)` : columns};
+  ${({ gap }) =>
+    gap &&
+    css`
+      gap: ${gap}px;
+    `}
+  & .full-width {
+    grid-column: 1 / -1;
+  }
+`;
+
+export { Flex, Grid };

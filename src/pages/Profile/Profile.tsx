@@ -1,10 +1,13 @@
+import { PropsWithChildren } from 'react';
 import { Tabs } from 'antd';
 import { MdSearch, MdLockOpen } from 'react-icons/md';
 
+import { ReactComponent as InfoIcon } from '../../assets/icons/info.svg';
+
 import { Account } from './Account';
 import { Flex } from '../../layouts/utils';
-import { PropsWithChildren } from 'react';
 import { Security } from './Security';
+import { Info } from './Info';
 
 interface LabelProps {
   icon: React.ReactNode;
@@ -23,7 +26,7 @@ const Label = (props: PropsWithChildren<LabelProps>) => {
 const Profile = () => {
   return (
     <Tabs
-      defaultActiveKey="2"
+      defaultActiveKey="3"
       destroyInactiveTabPane
       items={[
         {
@@ -33,13 +36,13 @@ const Profile = () => {
         },
         {
           key: '2',
-          label: <Label icon={<MdLockOpen size={20} />}>Profile</Label>,
+          label: <Label icon={<MdLockOpen size={20} />}>Security</Label>,
           children: <Security />,
         },
         {
           key: '3',
-          label: <Label icon={<MdSearch size={20} />}>Security</Label>,
-          children: <div>Security</div>,
+          label: <Label icon={<InfoIcon />}>Info</Label>,
+          children: <Info />,
         },
         {
           key: '4',

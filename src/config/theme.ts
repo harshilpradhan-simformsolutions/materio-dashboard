@@ -42,16 +42,17 @@ export const theme: ThemeConfig = {
     },
     Radio: {
       fontSize: 16,
+      colorText: typography.main,
     },
     Input: {
       colorBgContainer: dark.background,
       colorBorder: dark.other,
-      colorText: typography.secondary,
+      colorText: typography.main,
       borderRadiusSM: 6,
       borderRadius: 6,
       borderRadiusLG: 6,
       fontSize: 16,
-      colorTextPlaceholder: typography.secondary,
+      colorTextPlaceholder: typography.disabled,
     },
     Card: {
       colorBgContainer: dark.background,

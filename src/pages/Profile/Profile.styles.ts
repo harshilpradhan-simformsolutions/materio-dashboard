@@ -57,8 +57,6 @@ export const AccountContainer = styled.div`
 export const SecurityContainer = styled.form`
   font-weight: 400;
   .password {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     border-bottom: 1px solid var(--color-divider);
     .ant-input-affix-wrapper {
       height: 54px;
@@ -95,6 +93,27 @@ export const SecurityContainer = styled.form`
       }
       &__description {
         color: var(--color-secondary);
+      }
+    }
+  }
+`;
+
+export const InfoContainer = styled.form`
+  .gender-label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .ant-select {
+    & .ant-select-arrow {
+      color: unset;
+    }
+    & .ant-select-selector {
+      height: 100%;
+      background-color: transparent;
+      border: 1px solid #e7e3fc3b;
+      & .ant-select-selection-item {
+        line-height: 60px;
       }
     }
   }

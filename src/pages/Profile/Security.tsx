@@ -1,7 +1,7 @@
 import { Input } from 'antd';
 import { MdLockOpen } from 'react-icons/md';
 
-import { Flex } from '../../layouts/utils';
+import { Flex, Grid } from '../../layouts/utils';
 import { ProfileAction } from './ProfileAction';
 import { SecurityContainer } from './Profile.styles';
 import security from '../../assets/images/security.png';
@@ -10,7 +10,7 @@ import { ReactComponent as Key } from '../../assets/icons/key.svg';
 const Security = () => {
   return (
     <SecurityContainer>
-      <div className="password my-20">
+      <Grid className="password my-20" columns={2}>
         <div className="password-fields">
           <Input.Password className="mb-24" placeholder="Current Password" />
           <Input.Password className="mb-24" placeholder="New Password" />
@@ -22,7 +22,7 @@ const Security = () => {
         <div className="password-image">
           <img src={security} />
         </div>
-      </div>
+      </Grid>
       <div className="auth">
         <Flex gap={16} className="auth-header my-24">
           <span className="icon">
