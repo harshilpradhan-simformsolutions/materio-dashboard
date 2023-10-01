@@ -5,12 +5,13 @@ import { Input, Select, Button, Space } from 'antd';
 import profile from '../../assets/images/profile.png';
 import { AccountContainer } from './Profile.styles';
 import { ReactComponent as WarningIcon } from '../../assets/icons/warning.svg';
+import { ProfileAction } from './ProfileAction';
 
 const Account = () => {
   const [showBanner, setShowBanner] = useState(true);
 
   return (
-    <AccountContainer className="px-20 mb-20">
+    <AccountContainer>
       <Space className="mb-24 mt-20" size={20}>
         <img className="profile-image" src={profile} />
         <div>
@@ -71,12 +72,7 @@ const Account = () => {
         //   closeIcon={<RxCross2 size={16} />}
         // />
       )}
-      <Space size={16}>
-        <Button type="primary" onClick={() => setShowBanner(true)}>
-          SAVE CHANGES
-        </Button>
-        <Button>CANCEL</Button>
-      </Space>
+      <ProfileAction onSaveChanges={() => setShowBanner(false)} />
     </AccountContainer>
   );
 };

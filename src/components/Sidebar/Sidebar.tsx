@@ -24,6 +24,7 @@ import { ReactComponent as Invoice } from '../../assets/icons/invoice.svg';
 import { ReactComponent as Arrows } from '../../assets/icons/components.svg';
 import { ReactComponent as Typography } from '../../assets/icons/typography.svg';
 import { ReactComponent as Checked } from '../../assets/icons/checked.svg';
+import { Link } from 'react-router-dom';
 
 const items = ['CRM', 'Analytics', 'eCommerce'];
 
@@ -33,11 +34,11 @@ const Sidebar = () => {
   return (
     <SidebarBase>
       <div className="py-8">
-        <div className="logo">
+        <Link to="/" className="logo">
           <Logo />
           <h1>MATERIO</h1>
           <Radio />
-        </div>
+        </Link>
       </div>
       <div className="navbar-content">
         <Menu

@@ -9,6 +9,8 @@ export const SidebarBase = styled.nav`
     justify-content: space-between;
     gap: 12px;
     padding: 8px 22px;
+    color: inherit;
+    text-decoration: none;
     h1 {
       flex: 1;
       font-size: 20px;

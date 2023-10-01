@@ -119,6 +119,10 @@ export const GlobalStyle = createGlobalStyle`
 
   /** AntD Global customization */
   .ant-btn {
+    &.secondary {
+      color: var(--color-secondary);
+      border-color: var(--color-secondary);
+    }
     text-transform: uppercase;
     font-weight: 500;
     &-default {
@@ -220,8 +224,16 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 6px;
     font-weight: 500;
     color: #E7E3FCAD;
+    .ant-tabs-content-holder {
+      padding: 0 20px 20px 20px;
+    }
+    &-tab {
+      + .ant-tabs-tab {
+        margin-left: 0 !important;
+      }
+    }
     &-tab-btn {
-      padding: 0 20px;
+      padding: 0 16px;
     }
     &-nav {
       &::before {

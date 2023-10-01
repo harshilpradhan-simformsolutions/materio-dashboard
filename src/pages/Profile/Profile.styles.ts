@@ -53,3 +53,49 @@ export const AccountContainer = styled.div`
     }
   }
 `;
+
+export const SecurityContainer = styled.form`
+  font-weight: 400;
+  .password {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--color-divider);
+    .ant-input-affix-wrapper {
+      height: 54px;
+    }
+    &-image {
+      position: relative;
+      img {
+        position: absolute;
+        width: 534px;
+        bottom: 0;
+      }
+    }
+  }
+  .auth {
+    color: var(--color-text);
+    &-header {
+      &__text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+      }
+    }
+    &-body {
+      text-align: center;
+      &__logo {
+        // Color is used only here
+        background-color: rgb(59, 50, 93);
+        border-radius: 6px;
+      }
+      &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+      }
+      &__description {
+        color: var(--color-secondary);
+      }
+    }
+  }
+`;
