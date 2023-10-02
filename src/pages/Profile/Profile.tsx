@@ -1,5 +1,5 @@
 import { Tabs } from 'antd';
-import { MdSearch, MdLockOpen } from 'react-icons/md';
+import { MdSearch, MdLockOpen, MdNotificationsNone } from 'react-icons/md';
 
 import { Label } from '../../components/antd/Label';
 import { ReactComponent as InfoIcon } from '../../assets/icons/info.svg';
@@ -9,11 +9,12 @@ import { Account } from './Account';
 import { Info } from './Info';
 import { Billing } from './Billing';
 import { Security } from './Security';
+import { Notifications } from './Notifications';
 
 const Profile = () => {
   return (
     <Tabs
-      defaultActiveKey="4"
+      defaultActiveKey="5"
       destroyInactiveTabPane
       items={[
         {
@@ -35,6 +36,15 @@ const Profile = () => {
           key: '4',
           label: <Label icon={<BillingIcon />}>Billing</Label>,
           children: <Billing />,
+        },
+        {
+          key: '5',
+          label: (
+            <Label icon={<MdNotificationsNone size={20} />}>
+              Notifications
+            </Label>
+          ),
+          children: <Notifications />,
         },
       ]}
     />

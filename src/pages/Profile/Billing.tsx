@@ -35,7 +35,7 @@ const Billing = () => {
           direction="column"
           className="current-plan start p-20"
         >
-          <h2>Your Current Plan</h2>
+          <h2 className="price-header">Your Current Plan</h2>
           <Tag className="primary" bordered={false}>
             Basic Plan
           </Tag>

@@ -121,4 +121,17 @@ export const BillingContainer = styled.div`
     font-size: 16px;
     line-height: 24px;
   }
+  .price-header {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+`;
+
+export const NotificationsContainer = styled.div`
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+  }
 `;
