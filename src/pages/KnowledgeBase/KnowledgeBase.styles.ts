@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import heroBg from '../../assets/images/hero-bg.png';
 
 export const KnowledgeBaseRoot = styled.div`
-  max-height: calc(100vh - 60px);
-  overflow-y: auto;
   .hero {
     height: 320px;
     margin-bottom: 24px;

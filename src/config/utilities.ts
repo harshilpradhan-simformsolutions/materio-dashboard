@@ -2,6 +2,12 @@ const units = [
   1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 32, 40, 48, 56, 64, 72, 80, 96,
 ];
 
+const radius = [4, 5, 6];
+
+const fontWeight = [400, 500];
+
+const fontSize = [14, 16, 18, 20, 24];
+
 export const classes = units
   .map((unit) => {
     return `
@@ -50,6 +56,36 @@ export const classes = units
     .py-${unit} {
       padding-top: ${unit}px;
       padding-bottom: ${unit}px;
+    }
+  `;
+  })
+  .join('\n');
+
+export const radiusClasses = radius
+  .map((unit) => {
+    return `
+    .br-${unit} {
+      border-radius: ${unit}px;
+    }
+  `;
+  })
+  .join('\n');
+
+export const fontWeightClasses = fontWeight
+  .map((unit) => {
+    return `
+    .fw-${unit} {
+      font-weight: ${unit};
+    }
+  `;
+  })
+  .join('\n');
+
+export const fontSizeClasses = fontSize
+  .map((unit) => {
+    return `
+    .fs-${unit} {
+      font-size: ${unit}px;
     }
   `;
   })

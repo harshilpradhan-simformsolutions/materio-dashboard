@@ -1,6 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import { dark, misc, palettes, typography } from './config/colors';
-import { classes } from './config/utilities';
+import {
+  classes,
+  fontSizeClasses,
+  fontWeightClasses,
+  radiusClasses,
+} from './config/utilities';
 
 export const GlobalStyle = createGlobalStyle`
   :root { 
@@ -120,9 +125,21 @@ export const GlobalStyle = createGlobalStyle`
 
   /** AntD Global customization */
   .ant-btn {
+    &.success {
+      color: var(--color-success);
+      border-color: var(--color-success);
+      &:hover {
+        color: var(--color-success) !important;
+        border-color: var(--color-success) !important;
+      }
+    }
     &.secondary {
       color: var(--color-secondary);
       border-color: var(--color-secondary);
+      &:hover {
+        color: var(--color-secondary) !important;
+        border-color: var(--color-secondary) !important;
+      }
     }
     text-transform: uppercase;
     font-weight: 500;
@@ -288,9 +305,38 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .ant-collapse {
+    border: none;
+    border-radius: 0;
+    & .ant-collapse-content {
+      background-color: unset;
+      border-top: none;
+    }
+    > .ant-collapse-item {
+      border-bottom: 1px solid var(--color-divider);
+    }
+    &-item {
+      border: 1px solid var(--color-divider);
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+      &:first-child {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+      &:last-child  {
+        border-bottom-left-radius: 6px !important;
+        border-bottom-right-radius: 6px !important;
+      }
+    }
+  }
+
 
   /** Utility classes */
   ${classes}
+  ${radiusClasses}
+  ${fontWeightClasses}
+  ${fontSizeClasses}
 
   .text-primary {
     color: var(--color-primary);

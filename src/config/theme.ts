@@ -63,5 +63,9 @@ export const theme: ThemeConfig = {
     Alert: {
       colorWarningBg: palettes.warning.outlinedRestingBg,
     },
+    Collapse: {
+      colorText: typography.main,
+      fontFamily: 'inherit',
+    },
   },
 };

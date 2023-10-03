@@ -7,6 +7,7 @@ const Flex = styled.div<{
   gap?: number;
   direction?: 'row' | 'column';
   align?: string;
+  justify?: string;
 }>`
   display: flex;
   align-items: center;
@@ -15,6 +16,11 @@ const Flex = styled.div<{
     align &&
     css`
       align-items: ${align};
+    `}
+  ${({ justify }) =>
+    justify &&
+    css`
+      justify-content: ${justify};
     `}
   ${({ gap }) =>
     gap &&

@@ -9,13 +9,22 @@ const Grid = styled.div`
   grid-template-columns: 260px 1fr;
 `;
 
+// Ensure page content is scrollable, but the sidebar and header are not
+// 60px is the height of the header
+const HomeBase = styled.div`
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+`;
+
 const Home = () => {
   return (
     <Grid>
       <Sidebar />
       <div>
         <Header />
-        <Outlet />
+        <HomeBase>
+          <Outlet />
+        </HomeBase>
       </div>
     </Grid>
   );
