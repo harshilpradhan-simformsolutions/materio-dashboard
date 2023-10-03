@@ -14,7 +14,7 @@ import { Notifications } from './Notifications';
 const Profile = () => {
   return (
     <Tabs
-      defaultActiveKey="5"
+      defaultActiveKey="1"
       destroyInactiveTabPane
       items={[
         {
